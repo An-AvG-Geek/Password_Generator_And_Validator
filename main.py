@@ -11,17 +11,17 @@ def main():
         choice=st.selectbox("MENU",["Password Generator","Password Validator"])
         if choice=="Password Generator":
             length=int(get_length())
+            password=generate_password(length)
+
 
 
 def get_length():
     while True:
-        length = st.text_input("Enter the length of the password","type here..")
-        if(st.button('Submit')):
-    
-            if length.isdigit():
-                return length
-            else:
-                st.write("invalid length .... ")
+        length = st.slider("Select the level", 0, 50)
+        if length.isdigit():
+            return length
+        else:
+            st.write("invalid length ....please try again with valid input ")
 
 
 def generate_password(len):
