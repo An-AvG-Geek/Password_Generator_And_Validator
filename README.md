@@ -24,11 +24,15 @@ $ streamlit run password_toolkit.py
 ```bash
 git clone https://github.com/An-AvG-Geek/Password_Toolkit.git
 ```
-2.Install Necessary Requirements:
+2.Navigate into the Directory:
+```bash
+cd Password_Toolkit
+```
+3.Install Necessary Requirements:
 ```bash
 pip install -r requirements.txt
 ```
-3.Run the Script:
+4.Run the Script:
 ```bash
 python terminal_version.py
 ```
