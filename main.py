@@ -12,7 +12,9 @@ def main():
         if choice=="Password Generator":
             length=int(get_length())
             password=generate_password(length)
-            st.success(f"your password is \n{password}")
+            st.success(f"your password is {password}")
+        elif choice=="Password Validator":
+            validator()
 
 
 
@@ -31,7 +33,7 @@ def generate_password(len):
 
 
 def validator():
-    print(
+    st.write(
         """This password validation is based on certain conditions 
              1. uppercase letters >2
              2. lowercase letters >2
@@ -42,16 +44,16 @@ def validator():
              
           """
     )
-    password = input("Enter your password ")
+    password = st.text_input("Enter your password ","password....")
 
     count = check(password)
     percent = (count / 5) * 100
 
-    print()
-    print(f"your password is {percent}% strong ")
+    
+    st.success(f"your password is {percent}% strong ")
 
     if percent < 50:
-        print("use our password generator to make your password even stronger ")
+        st.error("use our password generator to make your password even stronger ")
 
 
 def check(password):
