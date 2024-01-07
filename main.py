@@ -19,7 +19,7 @@ def main():
 
 
 def get_length():
-    return st.slider("Select the level", 0, 50)
+    return st.slider("Select the length", 0, 50)
         
 
 
