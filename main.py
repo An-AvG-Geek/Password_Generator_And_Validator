@@ -5,30 +5,17 @@ import streamlit as st
 #https://passwordgeneratorandvalidatorfirstprogram.streamlit.app/
 def main():
     st.title("Password Generator and Validator")
-    choice=st.selectbox("MENU",["Password Generator","Password Validator"])
+    
 
     while True:
-        choice = input("Enter the choice ")
-        print()
-        if int(choice) == 1:
-            len = int(get_length())
-            password = generate_password(len)
-
-            print(f"\nyour password is {password}\n")
-
-        elif int(choice) == 2:
-            validator()
-
-        elif int(choice) == 3:
-            print("Exiting from the program... ")
-            sys.exit()
-        else:
-            print("Enter a valid choice ... ")
+        choice=st.selectbox("MENU",["Password Generator","Password Validator"])
+        if choice=="Password Generator":
+            length=int(get_length)
 
 
 def get_length():
     while True:
-        length = input("Enter the length ")
+        length = st.text_input("Enter the length of the password","type here..")
         if length.isdigit():
             return length
         else:
