@@ -15,7 +15,6 @@ This Python application leverages the Streamlit library to provide a user-friend
 1.Run the program using streamlit:
 ```bash
 $ streamlit run password_toolkit.py
-
 ```
 2.Select "Password Generator" or "Password Validator" from the menu.
 3.Follow the prompts to generate or validate a password.
@@ -23,23 +22,14 @@ $ streamlit run password_toolkit.py
 1.Clone the Repository:
 ```bash
 git clone https://github.com/An-AvG-Geek/Password_Toolkit.git
-
-
 ```
 2.Install Necessary Requirements:
 ```bash
 pip install -r requirements.txt
-
-
-
 ```
 3.Run the Script:
 ```bash
 python terminal_version.py
-
-
-
-
 ```
 
 
