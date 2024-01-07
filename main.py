@@ -12,6 +12,7 @@ def main():
         if choice=="Password Generator":
             length=int(get_length())
             password=generate_password(length)
+            st.success(f"your password is {password}")
 
 
 
