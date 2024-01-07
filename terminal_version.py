@@ -2,7 +2,6 @@ import random
 import sys
 
 
-
 def main():
     print(
         """\t\t\t menu
