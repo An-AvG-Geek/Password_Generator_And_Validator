@@ -1,6 +1,6 @@
 # Password ToolKit
 
-https://passwordgeneratorandvalidatorfirstprogram.streamlit.app/#password-generator-and-validator
+https://passwordgeneratorandvalidatorfirstprogram.streamlit.app/
 
 This Python application leverages the Streamlit library to provide a user-friendly web interface for password generation and validation. Whether you need a strong, randomly generated password or want to assess the strength of an existing one, this toolkit has you covered.
 
