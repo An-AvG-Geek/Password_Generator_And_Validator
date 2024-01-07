@@ -2,7 +2,7 @@ import random
 import sys
 import streamlit as st
 
-#https://passwordgeneratorandvalidatorfirstprogram.streamlit.app/
+
 def main():
     st.title("Password Generator and Validator")
     
