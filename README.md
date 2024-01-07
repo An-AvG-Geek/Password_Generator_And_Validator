@@ -1,2 +1,14 @@
 # Password ToolKit
-Python project to Random password according to user inputted length or validate a given password inputted by the user
+
+https://passwordgeneratorandvalidatorfirstprogram.streamlit.app/#password-generator-and-validator
+
+This Python application leverages the Streamlit library to provide a user-friendly web interface for password generation and validation. Whether you need a strong, randomly generated password or want to assess the strength of an existing one, this toolkit has you covered.
+
+##Features:
+  ###1.Password Generator
+  Generate secure passwords with ease by specifying the desired length. The generator ensures a mix of uppercase letters, lowercase letters, digits, and special characters.
+
+  ###2.Password Validator
+  Evaluate the strength of your password based on specific criteria, including the number of uppercase letters, lowercase letters, special characters, digits, and overall length. The application provides a strength 
+  percentage and categorizes passwords as too weak, weak, or strong.
+     
