@@ -20,8 +20,8 @@ def get_length():
     
             if length.isdigit():
                 return length
-        else:
-            st.write("invalid length .... ")
+            else:
+                st.write("invalid length .... ")
 
 
 def generate_password(len):
