@@ -52,10 +52,15 @@ def validator():
         percent = (count / 5) * 100
 
         
-        st.success(f"your password is {percent}% strong ")
+        st.information(f"your password is {percent}% strong ")
 
-        if percent < 50:
-            st.error("use our password generator to make your password even stronger ")
+        if percent <= 30:
+            st.error("your password is too weak")
+        elif percent<=70:
+            st.warning("your password is weak")
+        elif percent>70:
+            st.success("your password is strong")
+        
 
 
 def check(password):
