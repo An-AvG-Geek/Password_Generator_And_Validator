@@ -16,10 +16,12 @@ def main():
 def get_length():
     while True:
         length = st.text_input("Enter the length of the password","type here..")
-        if length.isdigit():
-            return length
+        if(st.button('Submit')):
+    
+            if length.isdigit():
+                return length
         else:
-            print("invalid length .... ")
+            st.write("invalid length .... ")
 
 
 def generate_password(len):
