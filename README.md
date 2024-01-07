@@ -11,4 +11,9 @@ This Python application leverages the Streamlit library to provide a user-friend
   ### 2.Password Validator
   Evaluate the strength of your password based on specific criteria, including the number of uppercase letters, lowercase letters, special characters, digits, and overall length. The application provides a strength 
   percentage and categorizes passwords as too weak, weak, or strong.
-     
+## How to Use:
+1.Run the program using streamlit:
+```bash
+$ streamlit run password_toolkit.py
+
+```
