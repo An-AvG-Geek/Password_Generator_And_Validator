@@ -33,7 +33,7 @@ def generate_password(len):
 
 
 def validator():
-    st.write(
+    st.text(
         """This password validation is based on certain conditions\n 
              1. uppercase letters >2\n
              2. lowercase letters >2\n
