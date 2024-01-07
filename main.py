@@ -16,12 +16,8 @@ def main():
 
 
 def get_length():
-    while True:
-        length = st.slider("Select the level", 0, 50)
-        if length.isdigit():
-            return length
-        else:
-            st.write("invalid length ....please try again with valid input ")
+    return st.slider("Select the level", 0, 50)
+        
 
 
 def generate_password(len):
