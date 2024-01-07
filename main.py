@@ -7,14 +7,14 @@ def main():
     st.title("Password Generator and Validator")
     
 
-    while True:
-        choice=st.selectbox("MENU",["Password Generator","Password Validator"])
-        if choice=="Password Generator":
-            length=int(get_length())
-            password=generate_password(length)
-            st.success(f"your password is {password}")
-        elif choice=="Password Validator":
-            validator()
+    
+    choice=st.selectbox("MENU",["Password Generator","Password Validator"])
+    if choice=="Password Generator":
+        length=int(get_length())
+        password=generate_password(length)
+        st.success(f"your password is {password}")
+    elif choice=="Password Validator":
+        validator()
 
 
 
@@ -34,12 +34,12 @@ def generate_password(len):
 
 def validator():
     st.write(
-        """This password validation is based on certain conditions 
-             1. uppercase letters >2
-             2. lowercase letters >2
-             3. special characters >2
-             4. digits >2
-             5. length >12
+        """This password validation is based on certain conditions\n 
+             1. uppercase letters >2\n
+             2. lowercase letters >2\n
+             3. special characters >2\n
+             4. digits >2\n
+             5. length >12\n
              Based on these parameters you will get the strength of the password in percent
              
           """
