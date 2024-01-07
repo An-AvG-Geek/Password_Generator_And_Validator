@@ -45,15 +45,17 @@ def validator():
           """
     )
     password = st.text_input("Enter your password ","password....")
+    if st.button("Submit"):
+        
 
-    count = check(password)
-    percent = (count / 5) * 100
+        count = check(password)
+        percent = (count / 5) * 100
 
-    
-    st.success(f"your password is {percent}% strong ")
+        
+        st.success(f"your password is {percent}% strong ")
 
-    if percent < 50:
-        st.error("use our password generator to make your password even stronger ")
+        if percent < 50:
+            st.error("use our password generator to make your password even stronger ")
 
 
 def check(password):
