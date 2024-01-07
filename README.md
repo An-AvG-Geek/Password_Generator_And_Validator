@@ -17,3 +17,10 @@ This Python application leverages the Streamlit library to provide a user-friend
 $ streamlit run password_toolkit.py
 
 ```
+2.Select "Password Generator" or "Password Validator" from the menu.
+3.Follow the prompts to generate or validate a password.
+
+## Dependencies:
+- Python 3.x
+- Streamlit
+- Random
