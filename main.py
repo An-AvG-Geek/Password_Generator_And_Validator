@@ -5,7 +5,7 @@ import streamlit as st
 #https://passwordgeneratorandvalidatorfirstprogram.streamlit.app/
 def main():
     st.title("Password Generator and Validator")
-    print(
+    st.text(
         """\t\t\t menu
               1. password generator 
               2. password validator 
