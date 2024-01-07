@@ -5,13 +5,7 @@ import streamlit as st
 #https://passwordgeneratorandvalidatorfirstprogram.streamlit.app/
 def main():
     st.title("Password Generator and Validator")
-    st.text(
-        """\t\t\t menu
-              1. password generator 
-              2. password validator 
-              3. exit from the program
-          """
-    )
+    choice=st.selectbox("MENU",["Password Generator","Password Validator"])
 
     while True:
         choice = input("Enter the choice ")
