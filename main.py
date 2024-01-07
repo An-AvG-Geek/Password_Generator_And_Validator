@@ -10,7 +10,7 @@ def main():
     while True:
         choice=st.selectbox("MENU",["Password Generator","Password Validator"])
         if choice=="Password Generator":
-            length=int(get_length)
+            length=int(get_length())
 
 
 def get_length():
