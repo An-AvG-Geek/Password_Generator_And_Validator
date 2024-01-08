@@ -3,6 +3,7 @@ import streamlit as st
 
 
 def main():
+    st.set_page_config(page_title="Password Toolkit",page_icon="🔐")
     st.sidebar.title("Password Toolkit")
    
 
