@@ -36,37 +36,52 @@ def validator():
     password = st.text_input("Enter your password ", "password....")
     if st.button("Submit"):
         parameters = check(password)
+        count=0
 
-        if len(password)>6:
+        if len(password)>=6:
             st.success("Length is >6")
+            count+=1
         else :
             st.error("The length is less than requirement")
 
 
-        if parameters[0]>2:
+        if parameters[0]>=2:
             st.success("Uppercase present")
+            count+=1
         else:
             st.error("Uppercase characters not satisfied  ")
 
-        if parameters[1]>2:
+        if parameters[1]>=2:
             st.success("Lowercase present")
+            count+=1
         else:
             st.error("Lowercase characters not satisfied")
 
-        if parameters[2]>1:
+        if parameters[2]>=1:
             st.success("Digits present ")
+            count+=1
         else:
-            st.error("Numeric characters not found ")
+            st.error("Numeric characters not satisfied ")
 
-        if parameters[3]>1:
+        if parameters[3]>=1:
             st.success("Special characters present ")
+            count+=1
         else:
-            st.error("Special characters not found")
+            st.error("Special characters not satisfied")
 
         if parameters[4]>0:
             st.error("Space is present")
         else:
             st.success("No space is found ")
+            count+=1
+
+        percent=(count/6)*100
+        st.progress(int(percent),"STRENGTH")
+
+        if percent==100:
+            st.balloons()
+
+
 
         
        
