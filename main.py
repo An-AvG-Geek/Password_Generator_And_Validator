@@ -3,6 +3,7 @@ import streamlit as st
 
 
 def main():
+    st.sidebar()
     st.sidebar.title("Password Toolkit")
     
 
