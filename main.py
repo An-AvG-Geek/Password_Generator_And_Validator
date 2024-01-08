@@ -3,6 +3,7 @@ import streamlit as st
 
 
 def main():
+    st.sidebar.title("Password Toolkit")
     st.title("Password Generator and Validator")
 
     choice = st.selectbox("MENU", ["Password Generator", "Password Validator"])
