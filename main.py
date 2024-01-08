@@ -3,26 +3,19 @@ import streamlit as st
 
 
 def main():
-    st.sidebar()
-    st.sidebar.title("Password Toolkit")
-    
+    st.title("Password Generator and Validator")
 
-    
-    choice=st.sidebar.selectbox("MENU",["Password Generator","Password Validator"])
-    if choice=="Password Generator":
-        st.title("Password Generator")
-        length=int(get_length())
-        password=generate_password(length)
+    choice = st.selectbox("MENU", ["Password Generator", "Password Validator"])
+    if choice == "Password Generator":
+        length = int(get_length())
+        password = generate_password(length)
         st.info(f"your password is {password}")
-    elif choice=="Password Validator":
-        st.title("Password Validator")
+    elif choice == "Password Validator":
         validator()
-
 
 
 def get_length():
     return st.slider("Select the length", 0, 50)
-        
 
 
 def generate_password(len):
@@ -46,23 +39,17 @@ def validator():
              
           """
     )
-    password = st.text_input("Enter your password ","password....")
+    password = st.text_input("Enter your password ", "password....")
     if st.button("Submit"):
-        
-
         count = check(password)
         percent = (count / 5) * 100
 
-        
-        
-
         if percent <= 30:
             st.error(f"your password is too weak (STRENGTH= {percent}%)")
-        elif percent<=70:
+        elif percent <= 70:
             st.warning(f"your password is weak (STRENGTH= {percent}%)")
-        elif percent>70:
+        elif percent > 70:
             st.success(f"your password is strong (STRENGTH= {percent}%)")
-        
 
 
 def check(password):
