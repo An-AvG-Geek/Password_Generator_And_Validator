@@ -6,12 +6,14 @@ def main():
     st.sidebar.title("Password Toolkit")
    
 
-    choice = st.selectbox("MENU", ["Password Generator", "Password Validator"])
+    choice = st.sidebar.selectbox("MENU", ["Password Generator", "Password Validator"])
     if choice == "Password Generator":
+        st.title("Password Generator")
         length = int(get_length())
         password = generate_password(length)
         st.info(f"your password is {password}")
     elif choice == "Password Validator":
+        st.title("Password Validator")
         validator()
 
 
