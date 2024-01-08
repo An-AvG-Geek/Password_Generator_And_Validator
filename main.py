@@ -8,7 +8,7 @@ def main():
     st.sidebar.title("Password Toolkit")
    
 
-    choice = st.sidebar.selectbox("Password Toolkit",["Password Generator", "Password Validator"])
+    choice = st.sidebar.option_menu(menu_title="Password Toolkit",options=["Password Generator", "Password Validator"])
     if choice == "Password Generator":
         st.title("Password Generator")
         length = int(get_length())
