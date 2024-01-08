@@ -1,5 +1,6 @@
 import random
 import streamlit as st
+from streamlit_option_menu import option_menu
 
 
 def main():
@@ -7,7 +8,7 @@ def main():
     st.sidebar.title("Password Toolkit")
    
 
-    choice = st.sidebar.selectbox("MENU", ["Password Generator", "Password Validator"])
+    choice = st.sidebar.option_menu(menu_title="MENU",options= ["Password Generator", "Password Validator"],icons=["key","lock-shield",menu_icon="tools")
     if choice == "Password Generator":
         st.title("Password Generator")
         length = int(get_length())
