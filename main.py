@@ -32,28 +32,48 @@ def generate_password(len):
 
 
 def validator():
-    st.text(
-        """This password validation is based on certain conditions
-             1. uppercase letters >2
-             2. lowercase letters >2
-             3. special characters >2
-             4. digits >2
-             5. length >12
-             Based on these parameters you will get the strength of the password in percent
-             
-          """
-    )
+   
     password = st.text_input("Enter your password ", "password....")
     if st.button("Submit"):
-        count = check(password)
-        percent = (count / 5) * 100
+        parameters = check(password)
 
-        if percent <= 30:
-            st.error(f"your password is too weak (STRENGTH= {percent}%)")
-        elif percent <= 70:
-            st.warning(f"your password is weak (STRENGTH= {percent}%)")
-        elif percent > 70:
-            st.success(f"your password is strong (STRENGTH= {percent}%)")
+        if len(password)>6:
+            st.success("Length is >6")
+        else :
+            st.error("The length is less than requirement")
+
+
+        if parameters[0]>2:
+            st.success("Uppercase present")
+        else:
+            st.error("Uppercase characters not satisfied  ")
+
+        if parameters[1]>2:
+            st.success("Lowercase present")
+        else:
+            st.error("Lowercase characters not satisfied")
+
+        if parameters[2]>1:
+            st.success("Digits present ")
+        else:
+            st.error("Numeric characters not found ")
+
+        if parameters[3]>1:
+            st.success("Special characters present ")
+        else:
+            st.error("Special characters not found")
+
+        if parameters[4]>0:
+            st.error("Space is present")
+        else:
+            st.success("No space is found ")
+
+        
+       
+
+        
+
+    
 
 
 def check(password):
@@ -61,6 +81,7 @@ def check(password):
     lower = 0
     special = 0
     digit = 0
+    space=0
 
     for i in password:
         if i.isupper():
@@ -71,20 +92,14 @@ def check(password):
             digit += 1
         if i.isalnum() == False:
             special += 1
+        if i.isspace():
+            space+=1
+            special-=1
 
-    count = 0
-    if upper > 2:
-        count += 1
-    if lower > 2:
-        count += 1
-    if special > 2:
-        count += 1
-    if digit > 2:
-        count += 1
-    if len(password) > 12:
-        count += 1
+    return [upper,lower,digit,special,space]
+        
 
-    return count
+    
 
 
 if __name__ == "__main__":
