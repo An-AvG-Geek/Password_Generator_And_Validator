@@ -4,6 +4,7 @@ import streamlit as st
 
 def main():
     st.title("Password Generator and Validator")
+    st.write("this is just a trial writing...")
 
     choice = st.selectbox("MENU", ["Password Generator", "Password Validator"])
     if choice == "Password Generator":
