@@ -10,7 +10,7 @@ def main():
     if choice == "Password Generator":
         st.title("Password Generator")
         length = int(get_length())
-        if (st.button("submit")):
+        if st.button("submit"):
             password = generate_password(length)
         st.info(f"your password is {password}")
     elif choice == "Password Validator":
