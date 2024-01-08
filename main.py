@@ -18,7 +18,7 @@ def main():
 
 
 def get_length():
-    return st.slider("Select the length", 0, 50)
+    return st.number_input("Enter the length", 0)
 
 
 def generate_password(len):
