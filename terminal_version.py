@@ -3,6 +3,10 @@ import sys
 
 
 def main():
+    print()
+    print(
+        "********************************************************************************"
+    )
     print(
         """\t\t\t menu
               1. password generator 
@@ -10,22 +14,31 @@ def main():
               3. exit from the program
           """
     )
+    print(
+        "********************************************************************************"
+    )
 
     while True:
-        choice = input("Enter the choice ")
+        try:
+            choice = int(input("Enter the choice "))
+        except ValueError:
+            print("Enter a valid input...\n")
+            continue
+
         print()
-        if int(choice) == 1:
+
+        if choice == 1:
             len = int(get_length())
             password = generate_password(len)
 
             print(f"\nyour password is {password}\n")
 
-        elif int(choice) == 2:
+        elif choice == 2:
             validator()
 
-        elif int(choice) == 3:
+        elif choice == 3:
             print("Exiting from the program... ")
-            sys.exit()
+            break
         else:
             print("Enter a valid choice ... ")
 
