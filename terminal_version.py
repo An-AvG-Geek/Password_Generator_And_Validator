@@ -1,12 +1,13 @@
-# command line version of a menu driven python code for password generation and validation.
-
-
 import random
 import sys
+from pyfiglet import *
 
 
 def main():
     print()
+    f = Figlet()
+    f.setFont(font="slant")
+    print(f.renderText("Password Toolkit"))
     print(
         "********************************************************************************"
     )
